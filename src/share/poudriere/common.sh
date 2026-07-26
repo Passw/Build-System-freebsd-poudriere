@@ -4653,7 +4653,7 @@ download_from_repo_check_pkg() {
 	    $1 == pkgbase {
 		    # Trim out PKG_NO_VERSION_FOR_DEPS missing version
 		    sub(/-\(null\)$/, "", $2)
-		    sub(/-$/, '' $2)
+		    sub(/-$/, "", $2)
 		    print $2
 		    printed=1
 	    }
